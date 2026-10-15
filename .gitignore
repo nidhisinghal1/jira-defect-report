@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Never commit credentials
+.env
+.jira_pat
+*.pem
+*.key
+
+# Timestamped report runs (the pinned open-defects.* are tracked deliberately)
+open-defects-*.xlsx
+open-defects-*.csv
