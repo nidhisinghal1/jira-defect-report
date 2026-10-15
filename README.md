@@ -121,15 +121,4 @@ both `R4.5` and `MCIS` is counted under both.
 | `--out` / `--csv` | Output path / also emit CSV |
 | `--ca-bundle` / `--insecure` | Corporate TLS interception |
 
-## Troubleshooting
 
-- **401** — token rejected or expired; generate a new one.
-- **403** — token valid but blocked; log into Jira in a browser once (Jira
-  Server throws a CAPTCHA after failed logins) and retry.
-- **SSLError** — corporate TLS proxy. Use `--ca-bundle <corp-ca.pem>`, or
-  `--insecure` as a last resort.
-- **"None of the tags matched any Jira field"** — run `--discover`; the tag
-  names likely differ from what is in Jira (e.g. `R4.5.0` rather than `R4.5`).
-
-Paging, retries on 429/5xx with backoff, and unassigned/empty fields are all
-handled.
